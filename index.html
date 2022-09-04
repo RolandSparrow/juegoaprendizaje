@@ -8,20 +8,38 @@
     <script>
         //1 es piedra, 2 es papel , 3 tijera
         let player = 0
-        let pc = 2
+        let pc = 1
         player = prompt("Choose: 1 for stone, 2 for paper, 3 for scissors  ")
+        //player
         if(player == 1){
-            alert("Choose stone")
+            alert("Choose 🥌")
         } else if(player == 2){
-            alert("Choose paper")
+            alert("Choose 🧻")
         }else if(player == 3){
-            alert("Choose scissor")
-        }
-        else{
+            alert("Choose ✂")
+        }else{
             alert("it's not valid")
         }
-        
-
+        //pc
+        if(pc == 1){
+            alert("pc choose 🥌")
+        } else if(pc == 2){
+            alert("pc choose 🧻")
+        }else if(pc == 3){
+            alert("pc choose ✂")
+        }
+        //combat
+        if(player == pc){
+            alert("tie")
+        }else if(player == 1 && pc == 3){
+            alert("win")
+        }else if(player == 2 && pc == 1){
+            alert("win")
+        }else if(player == 3 && pc == 2){
+            alert("win")
+        }else{
+            alert("lost")
+        }
 </script>
 </head>
 <body>
