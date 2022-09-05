@@ -9,28 +9,28 @@
         function aleatory(min, max){
             return Math.floor(Math.random()*(max-min + 1) + min) 
         }
+
+        function election(play){
+            let result = ""
+            if(play == 1){
+                result = ("Choose 🥌")
+            } else if(play == 2){
+                result = ("Choose 🧻")
+            }else if(play == 3){
+                result =("Choose ✂")
+            }else{
+                result = ("it's not valid")
+            }
+            return result           
+        }
         //1 es piedra, 2 es papel , 3 tijera
         let player = 0
         let pc = aleatory(1,3)
         player = prompt("Choose: 1 for stone, 2 for paper, 3 for scissors  ")
-        //player
-        if(player == 1){
-            alert("Choose 🥌")
-        } else if(player == 2){
-            alert("Choose 🧻")
-        }else if(player == 3){
-            alert("Choose ✂")
-        }else{
-            alert("it's not valid")
-        }
-        //pc
-        if(pc == 1){
-            alert("pc choose 🥌")
-        } else if(pc == 2){
-            alert("pc choose 🧻")
-        }else if(pc == 3){
-            alert("pc choose ✂")
-        }
+        
+        alert("PC choose: " + election(pc))
+        alert("Player choose: " + election(player))
+        
         //combat
         if(player == pc){
             alert("tie")
