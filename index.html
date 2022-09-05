@@ -31,11 +31,7 @@
         //combat
         if(player == pc){
             alert("tie")
-        }else if(player == 1 && pc == 3){
-            alert("win")
-        }else if(player == 2 && pc == 1){
-            alert("win")
-        }else if(player == 3 && pc == 2){
+        }else if((player == 1 && pc == 3) || (player == 2 && pc == 1) || (player == 3 && pc == 2)){
             alert("win")
         }else{
             alert("lost")
